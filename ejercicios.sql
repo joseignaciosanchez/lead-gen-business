@@ -107,7 +107,6 @@ left join leads on sites.site_id = leads.site_id
 group by leads.site_id
 order by clients.client_id,leads.site_id;
 
-/*PREGUNTAR*/
 /*9. Escriba una sola consulta que recupere los ingresos totales recaudados de cada cliente para cada mes del año. Pídalo por ID de cliente.*/
 use lead_gen_business;
 select
@@ -120,7 +119,6 @@ inner join clients on billing.client_id = clients.client_id
 group by year(billing.charged_datetime),monthname(billing.charged_datetime),clients.client_id
 order by clients.client_id asc;
 
-/*PREGUNTAR*/
 /*10. Escriba una sola consulta que recupere todos los sitios que posee cada cliente. Agrupe los resultados para que cada fila muestre un nuevo cliente. Se volverá más claro cuando agregue un nuevo campo llamado 'sitios' que tiene todos los sitios que posee el cliente. (SUGERENCIA: use GROUP_CONCAT)*/
 use lead_gen_business;
 select
